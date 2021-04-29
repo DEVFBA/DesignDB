@@ -1,5 +1,5 @@
 require('dotenv').config();
-const defaultconfig={
+const defaultConfig={
   username: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
@@ -9,6 +9,6 @@ const defaultconfig={
 }
 
 module.exports = {
-  development: defaultconfig,
+  development: defaultConfig,
   production: Object.assign(defaultConfig, {})
 }
