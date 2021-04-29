@@ -4,13 +4,13 @@ const sequelize = require('../db');
 const permission = require('../middlewares/permission');
 
 // Get all users
-router.get('/', permission('administrador'), async (req, res) => {
+router.get('/', async (req, res) => {
   const users = await sequelize.models.users.findAndCountAll();
   return res.status(200).json({ data: users });
 });
 
 // Creating a new user
-router.post('/', permission('administrador', 'cliente'), async (req, res) => {
+router.post('/', async (req, res) => {
   const { body } = req;
   const user = await sequelize.models.users.create({
     name: body.name,
