@@ -23,7 +23,7 @@ router.post('/', permission('administrador', 'cliente'), async (req, res) => {
 });
 
 // Update a review by id
-router.put('/:id', permission('administrador', 'cliente'), async (req, res) => {
+router.put('/:id', async (req, res) => {
   const { body, params: { id } } = req;
   const user = await sequelize.models.users.findByPk(id);
   if (!user) {
