@@ -8,8 +8,8 @@ const PurchaseOrder = require('./models/PurchaseOrder');
 const PurchaseOrderProduct = require('./models/PurchaseOrderProduct');
 
 // Database connection
-const sequelize = new Sequelize('DesignDB', 'admin', 'D3vfb@27', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.MYSQL_DATABASE, process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, {
+  host: process.env.MYSQL_HOST,
   dialect: 'mysql',
   logging: false,
 });

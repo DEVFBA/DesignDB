@@ -7,7 +7,7 @@ module.exports = {
       name: Sequelize.TEXT,
       role: Sequelize.TEXT,
       email: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true  // Revisar con Noe como lo resuelve
       },
