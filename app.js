@@ -12,7 +12,7 @@ app.use(express.json())
 app.use('/api', require('./routes'));
 
 app.listen(process.env.PORT, ()=>{
-  console.log('Express Ready');
+  console.log('Express Ready', process.env.PORT);
 });
 
 /* const sequelize = new Sequelize('DesignDB', 'admin', 'D3vfb@27', {
