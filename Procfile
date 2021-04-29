@@ -1,2 +1,2 @@
-release: npx sequelize-cñi db:migrate
+release: npx sequelize-cli db:migrate
 web: node app.js
